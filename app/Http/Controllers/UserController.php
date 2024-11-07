@@ -32,7 +32,7 @@ class UserController extends Controller
         // Log the user in
         Auth::login($user);
 
-        return redirect()->route('appDir.app');
+        return redirect()->route('layouts.app');
 
     }
 
@@ -51,7 +51,7 @@ class UserController extends Controller
             $request->session()->regenerate();
 
             // Redirect to the app or the intended page after successful login
-            return redirect()->route('appDir.app');
+            return redirect()->route('layouts.app');
         }
 
         // If login fails, redirect back with an error message
